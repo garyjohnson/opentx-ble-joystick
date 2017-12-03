@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13529"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="AppMenu">
+            <connections>
+                <outlet property="menu" destination="ziH-Am-z6R" id="ELq-MX-8ja"/>
+                <outlet property="statusMenuItem" destination="Q0a-Yv-CQb" id="7IX-av-YqE"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <menu id="ziH-Am-z6R">
+            <items>
+                <menuItem title="Searching..." id="Q0a-Yv-CQb">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="Ca8-cD-1DB"/>
+                <menuItem title="Calibrate Joystick..." keyEquivalent="k" id="HnH-z1-Lnd">
+                    <connections>
+                        <action selector="onCalibrateClicked:" target="-2" id="vs7-UY-viH"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="AOr-tr-CHE"/>
+                <menuItem title="About OpenTX BLE Joystick" id="MwI-Lj-lEI">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="onAboutClicked:" target="-2" id="YkP-eo-hpP"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Quit" keyEquivalent="q" id="xdS-sw-pkD">
+                    <connections>
+                        <action selector="onQuitClicked:" target="-2" id="4py-YI-uhJ"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="-136" y="40"/>
+        </menu>
+    </objects>
+</document>

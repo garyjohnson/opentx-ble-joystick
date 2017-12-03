@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C002ED71FD24D8B005D245F /* BluetoothTrainerDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C002ED61FD24D8B005D245F /* BluetoothTrainerDataParser.m */; };
+		8C49E6861FD3AE82000F5503 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C49E6851FD3AE81000F5503 /* Assets.xcassets */; };
+		8C49E6891FD3B50B000F5503 /* AppMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C49E6881FD3B50B000F5503 /* AppMenu.m */; };
+		8C9D0F571FD453BA00907EED /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9D0F561FD453BA00907EED /* CocoaLumberjack.framework */; };
+		8C9D0F581FD453BA00907EED /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9D0F561FD453BA00907EED /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8C9D0F5C1FD453E100907EED /* CocoaLumberjack.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C9D0F5B1FD453E100907EED /* CocoaLumberjack.framework.dSYM */; };
+		8CC779AE1FD22956008AC606 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC779AD1FD22956008AC606 /* AppDelegate.m */; };
+		8CC779B91FD22956008AC606 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC779B81FD22956008AC606 /* main.m */; };
+		8CDE72291FD4B79100323F0F /* BluetoothJoystickLinker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CDE72281FD4B79100323F0F /* BluetoothJoystickLinker.m */; };
+		8CE6ABA71FD33569005C1B70 /* VirtualJoystickService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE6ABA51FD33569005C1B70 /* VirtualJoystickService.m */; };
+		8CEA82011FD22BC500AD4625 /* BluetoothTrainerService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CEA82001FD22BC500AD4625 /* BluetoothTrainerService.m */; };
+		8CFC09301FD424E70013EDEC /* AppMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CFC092F1FD424E70013EDEC /* AppMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8C9D0F591FD453BB00907EED /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8C9D0F581FD453BA00907EED /* CocoaLumberjack.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C9D0F5A1FD453D100907EED /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				8C9D0F5C1FD453E100907EED /* CocoaLumberjack.framework.dSYM in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8C002ED01FD231E0005D245F /* opentx-ble-joystick.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "opentx-ble-joystick.entitlements"; sourceTree = "<group>"; };
+		8C002ED21FD231F8005D245F /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		8C002ED31FD231FD005D245F /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		8C002ED41FD23AC3005D245F /* BluetoothTrainerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BluetoothTrainerDelegate.h; sourceTree = "<group>"; };
+		8C002ED51FD24D8B005D245F /* BluetoothTrainerDataParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BluetoothTrainerDataParser.h; sourceTree = "<group>"; };
+		8C002ED61FD24D8B005D245F /* BluetoothTrainerDataParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BluetoothTrainerDataParser.m; sourceTree = "<group>"; };
+		8C49E6851FD3AE81000F5503 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8C49E6871FD3B50B000F5503 /* AppMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppMenu.h; sourceTree = "<group>"; };
+		8C49E6881FD3B50B000F5503 /* AppMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppMenu.m; sourceTree = "<group>"; };
+		8C9D0F561FD453BA00907EED /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = Carthage/Build/Mac/CocoaLumberjack.framework; sourceTree = "<group>"; };
+		8C9D0F5B1FD453E100907EED /* CocoaLumberjack.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = CocoaLumberjack.framework.dSYM; path = Carthage/Build/Mac/CocoaLumberjack.framework.dSYM; sourceTree = "<group>"; };
+		8C9D0F5D1FD456E300907EED /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		8CC779A91FD22956008AC606 /* OpenTX BLE Joystick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OpenTX BLE Joystick.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CC779AC1FD22956008AC606 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8CC779AD1FD22956008AC606 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8CC779B71FD22956008AC606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CC779B81FD22956008AC606 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8CDE72271FD4B79100323F0F /* BluetoothJoystickLinker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BluetoothJoystickLinker.h; sourceTree = "<group>"; };
+		8CDE72281FD4B79100323F0F /* BluetoothJoystickLinker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BluetoothJoystickLinker.m; sourceTree = "<group>"; };
+		8CE6ABA51FD33569005C1B70 /* VirtualJoystickService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VirtualJoystickService.m; sourceTree = "<group>"; };
+		8CE6ABA61FD33569005C1B70 /* VirtualJoystickService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirtualJoystickService.h; sourceTree = "<group>"; };
+		8CEA81FF1FD22BC500AD4625 /* BluetoothTrainerService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BluetoothTrainerService.h; sourceTree = "<group>"; };
+		8CEA82001FD22BC500AD4625 /* BluetoothTrainerService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BluetoothTrainerService.m; sourceTree = "<group>"; };
+		8CFC092F1FD424E70013EDEC /* AppMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8CC779A61FD22956008AC606 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C9D0F571FD453BA00907EED /* CocoaLumberjack.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8C002ED11FD231F8005D245F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C002ED31FD231FD005D245F /* IOKit.framework */,
+				8C002ED21FD231F8005D245F /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8CC779A01FD22956008AC606 = {
+			isa = PBXGroup;
+			children = (
+				8C9D0F5B1FD453E100907EED /* CocoaLumberjack.framework.dSYM */,
+				8C9D0F561FD453BA00907EED /* CocoaLumberjack.framework */,
+				8CC779AB1FD22956008AC606 /* opentx-ble-joystick */,
+				8CC779AA1FD22956008AC606 /* Products */,
+				8C002ED11FD231F8005D245F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8CC779AA1FD22956008AC606 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8CC779A91FD22956008AC606 /* OpenTX BLE Joystick.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8CC779AB1FD22956008AC606 /* opentx-ble-joystick */ = {
+			isa = PBXGroup;
+			children = (
+				8CDE722A1FD4B94800323F0F /* services */,
+				8C49E6851FD3AE81000F5503 /* Assets.xcassets */,
+				8C002ED01FD231E0005D245F /* opentx-ble-joystick.entitlements */,
+				8CC779AC1FD22956008AC606 /* AppDelegate.h */,
+				8CC779AD1FD22956008AC606 /* AppDelegate.m */,
+				8CC779B71FD22956008AC606 /* Info.plist */,
+				8CC779B81FD22956008AC606 /* main.m */,
+				8C49E6871FD3B50B000F5503 /* AppMenu.h */,
+				8C49E6881FD3B50B000F5503 /* AppMenu.m */,
+				8CFC092F1FD424E70013EDEC /* AppMenu.xib */,
+				8C9D0F5D1FD456E300907EED /* PrefixHeader.pch */,
+			);
+			path = "opentx-ble-joystick";
+			sourceTree = "<group>";
+		};
+		8CDE722A1FD4B94800323F0F /* services */ = {
+			isa = PBXGroup;
+			children = (
+				8CEA81FF1FD22BC500AD4625 /* BluetoothTrainerService.h */,
+				8CEA82001FD22BC500AD4625 /* BluetoothTrainerService.m */,
+				8C002ED41FD23AC3005D245F /* BluetoothTrainerDelegate.h */,
+				8C002ED51FD24D8B005D245F /* BluetoothTrainerDataParser.h */,
+				8C002ED61FD24D8B005D245F /* BluetoothTrainerDataParser.m */,
+				8CE6ABA61FD33569005C1B70 /* VirtualJoystickService.h */,
+				8CE6ABA51FD33569005C1B70 /* VirtualJoystickService.m */,
+				8CDE72271FD4B79100323F0F /* BluetoothJoystickLinker.h */,
+				8CDE72281FD4B79100323F0F /* BluetoothJoystickLinker.m */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8CC779A81FD22956008AC606 /* opentx-ble-joystick */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CC779BD1FD22956008AC606 /* Build configuration list for PBXNativeTarget "opentx-ble-joystick" */;
+			buildPhases = (
+				8CC779A51FD22956008AC606 /* Sources */,
+				8CC779A61FD22956008AC606 /* Frameworks */,
+				8CC779A71FD22956008AC606 /* Resources */,
+				8C9D0F591FD453BB00907EED /* Embed Frameworks */,
+				8C9D0F5A1FD453D100907EED /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "opentx-ble-joystick";
+			productName = "opentx-ble-joystick";
+			productReference = 8CC779A91FD22956008AC606 /* OpenTX BLE Joystick.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8CC779A11FD22956008AC606 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Useful Bits, LLC";
+				TargetAttributes = {
+					8CC779A81FD22956008AC606 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 8CC779A41FD22956008AC606 /* Build configuration list for PBXProject "opentx-ble-joystick" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8CC779A01FD22956008AC606;
+			productRefGroup = 8CC779AA1FD22956008AC606 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8CC779A81FD22956008AC606 /* opentx-ble-joystick */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8CC779A71FD22956008AC606 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C49E6861FD3AE82000F5503 /* Assets.xcassets in Resources */,
+				8CFC09301FD424E70013EDEC /* AppMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8CC779A51FD22956008AC606 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CDE72291FD4B79100323F0F /* BluetoothJoystickLinker.m in Sources */,
+				8CE6ABA71FD33569005C1B70 /* VirtualJoystickService.m in Sources */,
+				8CEA82011FD22BC500AD4625 /* BluetoothTrainerService.m in Sources */,
+				8C002ED71FD24D8B005D245F /* BluetoothTrainerDataParser.m in Sources */,
+				8C49E6891FD3B50B000F5503 /* AppMenu.m in Sources */,
+				8CC779B91FD22956008AC606 /* main.m in Sources */,
+				8CC779AE1FD22956008AC606 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8CC779BB1FD22956008AC606 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8CC779BC1FD22956008AC606 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		8CC779BE1FD22956008AC606 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5D9WAKM8D6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "opentx-ble-joystick/PrefixHeader.pch";
+				INFOPLIST_FILE = "opentx-ble-joystick/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.usefulbits.opentx-ble-joystick";
+				PRODUCT_NAME = "OpenTX BLE Joystick";
+			};
+			name = Debug;
+		};
+		8CC779BF1FD22956008AC606 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5D9WAKM8D6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "opentx-ble-joystick/PrefixHeader.pch";
+				INFOPLIST_FILE = "opentx-ble-joystick/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.usefulbits.opentx-ble-joystick";
+				PRODUCT_NAME = "OpenTX BLE Joystick";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8CC779A41FD22956008AC606 /* Build configuration list for PBXProject "opentx-ble-joystick" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CC779BB1FD22956008AC606 /* Debug */,
+				8CC779BC1FD22956008AC606 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CC779BD1FD22956008AC606 /* Build configuration list for PBXNativeTarget "opentx-ble-joystick" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CC779BE1FD22956008AC606 /* Debug */,
+				8CC779BF1FD22956008AC606 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8CC779A11FD22956008AC606 /* Project object */;
+}

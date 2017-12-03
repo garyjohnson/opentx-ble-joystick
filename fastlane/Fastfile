@@ -1,0 +1,14 @@
+fastlane_version "2.62.1"
+
+default_platform :mac
+
+platform :mac do
+  before_all do
+    carthage
+  end
+
+  desc "Build"
+  lane :build do
+    gym
+  end
+end
