@@ -1,6 +1,6 @@
 @protocol BluetoothTrainerDelegate
 
--(void)onTrainerConnected;
+-(void)onTrainerConnected:(NSString*)identifier;
 -(void)onTrainerDisconnected;
 -(void)onError:(NSString*)error;
 -(void)onLoading:(NSString*)error;

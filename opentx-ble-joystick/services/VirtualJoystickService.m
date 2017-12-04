@@ -10,8 +10,8 @@
 #define FOOHID_DESTROY 1
 #define FOOHID_SEND 2
 #define FOOHID_LIST 3
-#define VIRTUAL_DEVICE_NAME "Virtual Serial Transmitter"
-#define VIRTUAL_DEVICE_SN "SN  123456"
+#define VIRTUAL_DEVICE_NAME "OpenTX Bluetooth Trainer"
+#define VIRTUAL_DEVICE_SN "OpenTX"
 
 struct gamepad_report_t {
     int16_t leftX;
@@ -111,7 +111,7 @@ static char report_descriptor[58] = {
     NSString *name = @VIRTUAL_DEVICE_NAME;
     if([VirtualJoystickService deviceExists:name]) {
         DDLogDebug(@"Device exists!");
-        return NO;
+        return YES;
     } else {
         DDLogDebug(@"Device doesn't already exist");
     }

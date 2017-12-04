@@ -19,18 +19,12 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="Ca8-cD-1DB"/>
-                <menuItem title="Calibrate Joystick..." keyEquivalent="k" id="HnH-z1-Lnd">
+                <menuItem title="Calibrate Joystick..." hidden="YES" enabled="NO" keyEquivalent="k" id="HnH-z1-Lnd">
                     <connections>
                         <action selector="onCalibrateClicked:" target="-2" id="vs7-UY-viH"/>
                     </connections>
                 </menuItem>
-                <menuItem isSeparatorItem="YES" id="AOr-tr-CHE"/>
-                <menuItem title="About OpenTX BLE Joystick" id="MwI-Lj-lEI">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="onAboutClicked:" target="-2" id="YkP-eo-hpP"/>
-                    </connections>
-                </menuItem>
+                <menuItem isSeparatorItem="YES" hidden="YES" id="AOr-tr-CHE"/>
                 <menuItem title="Quit" keyEquivalent="q" id="xdS-sw-pkD">
                     <connections>
                         <action selector="onQuitClicked:" target="-2" id="4py-YI-uhJ"/>

@@ -1,62 +1,41 @@
 #import "BluetoothTrainerDataParser.h"
 
+const NSUInteger CHANNEL_COUNT = 8;
+const NSUInteger PPM_MIN = 980;
+const NSUInteger PPM_MAX = 2020;
+const NSUInteger PPM_RANGE = PPM_MAX - PPM_MIN;
+const NSUInteger HID_RANGE = 1022;
+
 @implementation BluetoothTrainerDataParser
 
 + (NSArray*)parse:(NSData*)data {
-    uint8_t *buffer = (uint8_t *)[data bytes];
-    NSUInteger length = [data length];
-    
-    // check for start and end markers, else throw away
-    if(buffer[0] != 0x7e || buffer[length-1] != 0x7e) {
-        DDLogError(@"Failed check for start stop!");
+    if(![self hasBoundaryMarkers:data]) {
+        DDLogError(@"Bluetooth data frame did not have boundary markers.");
         return nil;
     }
-    
-    // check for frame type 80, else throw away
-    if(buffer[1] != 0x80) {
+    if(![self isCorrectFrameType:data]) {
         DDLogError(@"Failed check for frame type!");
         return nil;
     }
     
-    // unescape bytes and unpack into channel values
-    uint8_t escapedBuffer[13] = {};
-    NSUInteger escapedIndex = 0;
-    for(int i = 1; i < length-2; i++, escapedIndex++) {
-        uint8_t byte = buffer[i];
-        
-        //unescape
-        if(byte == 0x7d) {
-            if(buffer[i+1] == 0x5e) {
-                escapedBuffer[escapedIndex] = 0x7e;
-                i++;
-            } else if(buffer[i+1] == 0x5d) {
-                escapedBuffer[escapedIndex] = 0x7d;
-                i++;
-            } else {
-                DDLogError(@"Unexpected escape sequence!");
-                return nil;
-            }
-        } else {
-            escapedBuffer[escapedIndex] = byte;
-        }
-    }
+    NSData *unescapedData = [self unescape:data];
     
-    // validate checksum, else throw away
-    uint8_t calculatedChecksum = 0;
-    for(int i = 0; i < 13; i++) {
-        calculatedChecksum ^= escapedBuffer[i];
-    }
-    if(calculatedChecksum != buffer[length-2]) {
+    uint8_t checksum = [self getChecksum:data];
+    if(![self passesChecksum:checksum data:unescapedData]) {
         DDLogError(@"Failed checksum!");
         return nil;
     }
     
-    // parse channel data as PPM values (on my tx, 988-2012ish)
-    NSMutableArray *channels = [[NSMutableArray alloc] init];
-    for(int channel = 0, i = 1; channel < 8; channel++) {
+    return [self parsePPMChannelData:unescapedData];
+}
 
-        uint16_t byte1 = escapedBuffer[i];
-        uint16_t byte2 = escapedBuffer[i + 1];
++ (NSArray*)parsePPMChannelData:(NSData*)data {
+    uint8_t *buffer = (uint8_t *)data.bytes;
+    // parse channel data as PPM values
+    NSMutableArray *channels = [[NSMutableArray alloc] init];
+    for(int channel = 0, i = 1; channel < CHANNEL_COUNT; channel++) {
+        uint16_t byte1 = buffer[i];
+        uint16_t byte2 = buffer[i + 1];
         uint16_t channelValue = 0;
         
         // channel data is packed into 12-byte blocks (aka 1.5 bytes),
@@ -76,18 +55,69 @@
             i+=2;
         }
         // incoming data is little endian
-        
+        channelValue = CFSwapInt16LittleToHost(channelValue);
+        float value = ((float)channelValue - (float)PPM_MIN) / (float)PPM_RANGE;
         // convert to relative value (later, do this somewhere else. should not be responsibility of parser)
-        NSUInteger min = 980;
-        NSUInteger max = 2020;
-        float range = (float)(max - min); // 1040
-        float value = (float)(CFSwapInt16LittleToHost(channelValue) - min);
-        value = value / range;
-        NSUInteger v = (NSUInteger)(value * 1022);
-        channels[channel] = [NSNumber numberWithUnsignedInteger:v];
+        NSUInteger hidValue = (NSUInteger)(value * HID_RANGE);
+        channels[channel] = [NSNumber numberWithUnsignedInteger:hidValue];
     }
     
     return [channels copy];
+}
+
++ (uint8_t)getChecksum:(NSData*)data {
+    uint8_t *buffer = (uint8_t *)data.bytes;
+    return buffer[data.length-2];
+}
+
++ (BOOL)passesChecksum:(uint8_t)checksum data:(NSData*)data {
+    uint8_t *buffer = (uint8_t *)data.bytes;
+    uint8_t calculatedChecksum = 0;
+    for(int i = 0; i < data.length; i++) {
+        calculatedChecksum ^= buffer[i];
+    }
+    
+    return calculatedChecksum == checksum;
+}
+
++ (BOOL)hasBoundaryMarkers:(NSData*)data {
+    uint8_t *buffer = (uint8_t *)data.bytes;
+    return buffer[0] == 0x7e && buffer[data.length-1] == 0x7e;
+}
+
++ (BOOL)isCorrectFrameType:(NSData*)data {
+    uint8_t *buffer = (uint8_t *)data.bytes;
+    return buffer[1] == 0x80;
+}
+
++(NSData*)unescape:(NSData*)escapedData {
+    uint8_t *buffer = (uint8_t *)escapedData.bytes;
+    NSUInteger length = escapedData.length;
+    
+    NSMutableData *unescapedData = [[NSMutableData alloc] init];
+ 
+    for(int i = 1; i < length-2; i++) {
+        uint8_t byte = buffer[i];
+        
+        if(byte != 0x7d) {
+            [unescapedData appendBytes:&byte length:1];
+            continue;
+        }
+        
+        if(buffer[i+1] == 0x5e) {
+            uint8_t newByte = 0x7e;
+            [unescapedData appendBytes:&newByte length:1];
+        } else if(buffer[i+1] == 0x5d) {
+            uint8_t newByte = 0x7d;
+            [unescapedData appendBytes:&newByte length:1];
+        } else {
+            DDLogError(@"Unexpected escape sequence!");
+            return nil;
+        }
+        
+        i++;
+    }
+    return [unescapedData copy];
 }
 
 @end

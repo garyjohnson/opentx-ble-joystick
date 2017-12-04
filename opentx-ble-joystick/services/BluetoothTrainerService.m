@@ -122,7 +122,12 @@ NSString *const DATA_UUID = @"FFF6";
     }
     
     if(self.dataStreamCharacteristic != nil) {
-        [self.delegate onTrainerConnected];
+        NSString *peripheralId = nil;
+        if (@available(macOS 10.13, *)) {
+            peripheralId = [[peripheral identifier] UUIDString];
+        }
+        
+        [self.delegate onTrainerConnected:peripheralId];
     }
 }
 

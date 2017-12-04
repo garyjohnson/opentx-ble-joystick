@@ -10,6 +10,7 @@
 		8C002ED71FD24D8B005D245F /* BluetoothTrainerDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C002ED61FD24D8B005D245F /* BluetoothTrainerDataParser.m */; };
 		8C49E6861FD3AE82000F5503 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C49E6851FD3AE81000F5503 /* Assets.xcassets */; };
 		8C49E6891FD3B50B000F5503 /* AppMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C49E6881FD3B50B000F5503 /* AppMenu.m */; };
+		8C73BF2B1FD4EDDC00D09698 /* Notifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C73BF2A1FD4EDDC00D09698 /* Notifications.m */; };
 		8C9D0F571FD453BA00907EED /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9D0F561FD453BA00907EED /* CocoaLumberjack.framework */; };
 		8C9D0F581FD453BA00907EED /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9D0F561FD453BA00907EED /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8C9D0F5C1FD453E100907EED /* CocoaLumberjack.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C9D0F5B1FD453E100907EED /* CocoaLumberjack.framework.dSYM */; };
@@ -55,6 +56,8 @@
 		8C49E6851FD3AE81000F5503 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C49E6871FD3B50B000F5503 /* AppMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppMenu.h; sourceTree = "<group>"; };
 		8C49E6881FD3B50B000F5503 /* AppMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppMenu.m; sourceTree = "<group>"; };
+		8C73BF291FD4EDDC00D09698 /* Notifications.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = "<group>"; };
+		8C73BF2A1FD4EDDC00D09698 /* Notifications.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Notifications.m; sourceTree = "<group>"; };
 		8C9D0F561FD453BA00907EED /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = Carthage/Build/Mac/CocoaLumberjack.framework; sourceTree = "<group>"; };
 		8C9D0F5B1FD453E100907EED /* CocoaLumberjack.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = CocoaLumberjack.framework.dSYM; path = Carthage/Build/Mac/CocoaLumberjack.framework.dSYM; sourceTree = "<group>"; };
 		8C9D0F5D1FD456E300907EED /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 				8C49E6881FD3B50B000F5503 /* AppMenu.m */,
 				8CFC092F1FD424E70013EDEC /* AppMenu.xib */,
 				8C9D0F5D1FD456E300907EED /* PrefixHeader.pch */,
+				8C73BF291FD4EDDC00D09698 /* Notifications.h */,
+				8C73BF2A1FD4EDDC00D09698 /* Notifications.m */,
 			);
 			path = "opentx-ble-joystick";
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				8CE6ABA71FD33569005C1B70 /* VirtualJoystickService.m in Sources */,
 				8CEA82011FD22BC500AD4625 /* BluetoothTrainerService.m in Sources */,
 				8C002ED71FD24D8B005D245F /* BluetoothTrainerDataParser.m in Sources */,
+				8C73BF2B1FD4EDDC00D09698 /* Notifications.m in Sources */,
 				8C49E6891FD3B50B000F5503 /* AppMenu.m in Sources */,
 				8CC779B91FD22956008AC606 /* main.m in Sources */,
 				8CC779AE1FD22956008AC606 /* AppDelegate.m in Sources */,
