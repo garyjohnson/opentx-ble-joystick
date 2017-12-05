@@ -22,6 +22,10 @@ Create a model for simulator use. Under model setup, set Internal RF and Externa
 
 OpenTX BLE Joystick will appear in the system tray and will show Searching... until connected. When it finds the radio it will prompt for connection. Use pin **000000** to connect.
 
+## Coming Soon
+
+Currently only supports mapping channels to joystick axis. PPM range calibration and mapping to buttons coming soon.
+
 ## Development
 
 Packaging requires create-dmg:
