@@ -2,7 +2,7 @@
 
 Use your OpenTX Blueooth Trainer as a virtual joystick on macOS.
 
-(Video in action)[https://www.instagram.com/p/BcN8UkvhLdp/?taken-by=gary.g.j]
+[Video in action](https://www.instagram.com/p/BcN8UkvhLdp/?taken-by=gary.g.j)
 
 ## Requirements
 
