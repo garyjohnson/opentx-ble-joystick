@@ -35,6 +35,11 @@ xcode-select --install
 fastlane mac build
 ```
 Build
+### mac package
+```
+fastlane mac package
+```
+Package
 
 ----
 

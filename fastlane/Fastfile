@@ -11,4 +11,11 @@ platform :mac do
   lane :build do
     gym
   end
+
+  desc "Package"
+  lane :package do
+    `rm -r ../build/*`
+    gym
+    `cd ../build && create-dmg "./OpenTX BLE Joystick.app"`
+  end
 end
