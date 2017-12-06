@@ -19,6 +19,11 @@
         self.notificationCenter = [NSNotificationCenter defaultCenter];
         [self.notificationCenter addObserver:self selector:@selector(onBluetoothConnected:) name:BLUETOOTH_CONNECTED object:nil];
         [self.notificationCenter addObserver:self selector:@selector(onBluetoothSearching:) name:BLUETOOTH_SEARCHING object:nil];
+        
+        __weak AppMenu *weakSelf = self;
+        [self.notificationCenter addObserverForName:FOOHID_MISSING object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification* notification) {
+            [weakSelf handleMissingFoohid];
+        }];
     }
     
     return self;
@@ -38,7 +43,6 @@
 }
 
 -(void)showInStatusBar {
-    
     NSMutableArray *topLevelObjects = nil;
     if(![[NSBundle mainBundle] loadNibNamed:@"AppMenu" owner:self topLevelObjects:&topLevelObjects]) {
         DDLogError(@"Failed to load AppMenu nib!");
@@ -56,6 +60,16 @@
 }
 
 -(IBAction)onQuitClicked:(id)sender {
+    [[NSApplication sharedApplication] terminate:nil];
+}
+
+-(void)handleMissingFoohid {
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert addButtonWithTitle:@"OK"];
+    [alert setMessageText:@"Missing requirement: foohid"];
+    [alert setInformativeText:@"foohid must be installed to use OpenTX BLE Joystick.\nDownload foohid at https://github.com/unbit/foohid/releases/latest.\n\nThe application will now exit."];
+    [alert setAlertStyle:NSWarningAlertStyle];
+    [alert runModal];
     [[NSApplication sharedApplication] terminate:nil];
 }
 

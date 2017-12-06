@@ -1,9 +1,9 @@
 #import "BluetoothJoystickLinker.h"
-
 #import "VirtualJoystickService.h"
 #import "BluetoothTrainerService.h"
 #import "BluetoothTrainerDataParser.h"
 #import <Foundation/Foundation.h>
+#import <AppKit/AppKit.h>
 #import "Notifications.h"
 
 @interface BluetoothJoystickLinker()
@@ -29,6 +29,7 @@
     dispatch_async(self.dispatchQueue, ^{
         if(![VirtualJoystickService init]) {
             DDLogError(@"Failed to initialize virtual joystick");
+            [self.notificationCenter postNotificationName:FOOHID_MISSING object:nil];
             return;
         }
         
