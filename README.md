@@ -30,6 +30,13 @@ Currently only supports mapping channels to joystick axis. PPM range calibration
 
 ## Development
 
+Dependencies can be installed via carthage:
+
+```bash
+brew install carthage
+carthage bootstrap
+```
+
 Packaging requires create-dmg:
 
 ```bash
