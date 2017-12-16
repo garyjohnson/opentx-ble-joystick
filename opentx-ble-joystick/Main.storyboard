@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="cY2-jG-8u9">
+            <objects>
+                <windowController storyboardIdentifier="ConfigureWindow" id="UxL-56-OVE" sceneMemberID="viewController">
+                    <window key="window" title="Configure Joystick" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="o6R-2G-TsE">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="294" y="362" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
+                        <connections>
+                            <outlet property="delegate" destination="UxL-56-OVE" id="rXg-qM-vY6"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="vhw-XU-tM8" kind="relationship" relationship="window.shadowedContentViewController" id="9SZ-te-3IZ"/>
+                    </connections>
+                </windowController>
+                <customObject id="wFv-4L-hOH" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-999" y="44"/>
+        </scene>
+        <!--Configuration View Controller-->
+        <scene sceneID="EFe-s5-1aC">
+            <objects>
+                <viewController id="vhw-XU-tM8" customClass="ConfigurationViewController" sceneMemberID="viewController">
+                    <view key="view" id="g8x-0u-H9o">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="UfY-mz-wfa" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-292" y="19"/>
+        </scene>
+    </scenes>
+</document>

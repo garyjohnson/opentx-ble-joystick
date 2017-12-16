@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="AppMenu">
@@ -19,15 +19,15 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="Ca8-cD-1DB"/>
-                <menuItem title="Calibrate Joystick..." hidden="YES" enabled="NO" keyEquivalent="k" id="HnH-z1-Lnd">
+                <menuItem title="Configure Joystick..." hidden="YES" enabled="NO" keyEquivalent="k" id="HnH-z1-Lnd">
                     <connections>
-                        <action selector="onCalibrateClicked:" target="-2" id="vs7-UY-viH"/>
+                        <action selector="onConfigureClicked:" target="-2" id="BNX-Ba-05h"/>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" hidden="YES" id="AOr-tr-CHE"/>
                 <menuItem title="Quit" keyEquivalent="q" id="xdS-sw-pkD">
                     <connections>
-                        <action selector="onQuitClicked:" target="-2" id="4py-YI-uhJ"/>
+                        <action selector="onQuitClicked:" target="-2" id="870-AT-5U1"/>
                     </connections>
                 </menuItem>
             </items>

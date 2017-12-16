@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		8C002ED71FD24D8B005D245F /* BluetoothTrainerDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C002ED61FD24D8B005D245F /* BluetoothTrainerDataParser.m */; };
+		8C1A47A81FDF4C96004C119F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C1A47A71FDF4C96004C119F /* Main.storyboard */; };
 		8C49E6861FD3AE82000F5503 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C49E6851FD3AE81000F5503 /* Assets.xcassets */; };
 		8C49E6891FD3B50B000F5503 /* AppMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C49E6881FD3B50B000F5503 /* AppMenu.m */; };
 		8C73BF2B1FD4EDDC00D09698 /* Notifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C73BF2A1FD4EDDC00D09698 /* Notifications.m */; };
+		8C9866FA1FDF4DBA00A995D3 /* ConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C9866F81FDF4DBA00A995D3 /* ConfigurationViewController.m */; };
 		8C9D0F571FD453BA00907EED /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9D0F561FD453BA00907EED /* CocoaLumberjack.framework */; };
 		8C9D0F581FD453BA00907EED /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C9D0F561FD453BA00907EED /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8C9D0F5C1FD453E100907EED /* CocoaLumberjack.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8C9D0F5B1FD453E100907EED /* CocoaLumberjack.framework.dSYM */; };
@@ -53,11 +55,14 @@
 		8C002ED41FD23AC3005D245F /* BluetoothTrainerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BluetoothTrainerDelegate.h; sourceTree = "<group>"; };
 		8C002ED51FD24D8B005D245F /* BluetoothTrainerDataParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BluetoothTrainerDataParser.h; sourceTree = "<group>"; };
 		8C002ED61FD24D8B005D245F /* BluetoothTrainerDataParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BluetoothTrainerDataParser.m; sourceTree = "<group>"; };
+		8C1A47A71FDF4C96004C119F /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8C49E6851FD3AE81000F5503 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C49E6871FD3B50B000F5503 /* AppMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppMenu.h; sourceTree = "<group>"; };
 		8C49E6881FD3B50B000F5503 /* AppMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppMenu.m; sourceTree = "<group>"; };
 		8C73BF291FD4EDDC00D09698 /* Notifications.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Notifications.h; sourceTree = "<group>"; };
 		8C73BF2A1FD4EDDC00D09698 /* Notifications.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Notifications.m; sourceTree = "<group>"; };
+		8C9866F71FDF4DBA00A995D3 /* ConfigurationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigurationViewController.h; sourceTree = "<group>"; };
+		8C9866F81FDF4DBA00A995D3 /* ConfigurationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfigurationViewController.m; sourceTree = "<group>"; };
 		8C9D0F561FD453BA00907EED /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = Carthage/Build/Mac/CocoaLumberjack.framework; sourceTree = "<group>"; };
 		8C9D0F5B1FD453E100907EED /* CocoaLumberjack.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = CocoaLumberjack.framework.dSYM; path = Carthage/Build/Mac/CocoaLumberjack.framework.dSYM; sourceTree = "<group>"; };
 		8C9D0F5D1FD456E300907EED /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -96,6 +101,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8C1A47A91FDF4CAA004C119F /* views */ = {
+			isa = PBXGroup;
+			children = (
+				8C9866F61FDF4DAB00A995D3 /* configuration */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		8C9866F61FDF4DAB00A995D3 /* configuration */ = {
+			isa = PBXGroup;
+			children = (
+				8C9866F71FDF4DBA00A995D3 /* ConfigurationViewController.h */,
+				8C9866F81FDF4DBA00A995D3 /* ConfigurationViewController.m */,
+			);
+			path = configuration;
+			sourceTree = "<group>";
+		};
 		8CC779A01FD22956008AC606 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +140,7 @@
 		8CC779AB1FD22956008AC606 /* opentx-ble-joystick */ = {
 			isa = PBXGroup;
 			children = (
+				8C1A47A91FDF4CAA004C119F /* views */,
 				8CDE722A1FD4B94800323F0F /* services */,
 				8C49E6851FD3AE81000F5503 /* Assets.xcassets */,
 				8C002ED01FD231E0005D245F /* opentx-ble-joystick.entitlements */,
@@ -131,6 +154,7 @@
 				8C9D0F5D1FD456E300907EED /* PrefixHeader.pch */,
 				8C73BF291FD4EDDC00D09698 /* Notifications.h */,
 				8C73BF2A1FD4EDDC00D09698 /* Notifications.m */,
+				8C1A47A71FDF4C96004C119F /* Main.storyboard */,
 			);
 			path = "opentx-ble-joystick";
 			sourceTree = "<group>";
@@ -211,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C1A47A81FDF4C96004C119F /* Main.storyboard in Resources */,
 				8C49E6861FD3AE82000F5503 /* Assets.xcassets in Resources */,
 				8CFC09301FD424E70013EDEC /* AppMenu.xib in Resources */,
 			);
@@ -225,6 +250,7 @@
 			files = (
 				8CDE72291FD4B79100323F0F /* BluetoothJoystickLinker.m in Sources */,
 				8CE6ABA71FD33569005C1B70 /* VirtualJoystickService.m in Sources */,
+				8C9866FA1FDF4DBA00A995D3 /* ConfigurationViewController.m in Sources */,
 				8CEA82011FD22BC500AD4625 /* BluetoothTrainerService.m in Sources */,
 				8C002ED71FD24D8B005D245F /* BluetoothTrainerDataParser.m in Sources */,
 				8C73BF2B1FD4EDDC00D09698 /* Notifications.m in Sources */,

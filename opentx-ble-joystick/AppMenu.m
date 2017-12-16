@@ -36,10 +36,14 @@
         status = [NSString stringWithFormat:@"Connected to %@", identifier];
     }
     [self.statusMenuItem setTitle:status];
+    NSStatusBarButton *button = self.statusBarItem.button;
+    button.image = [NSImage imageNamed:@"status-icon-connected"];
 }
 
 -(void)onBluetoothSearching:(NSNotification*)notification {
     [self.statusMenuItem setTitle:@"Searching..."];
+    NSStatusBarButton *button = self.statusBarItem.button;
+    button.image = [NSImage imageNamed:@"status-icon-searching"];
 }
 
 -(void)showInStatusBar {
@@ -53,10 +57,13 @@
     self.statusBarItem.menu = self.menu;
     self.statusBarItem.target = self;
     NSStatusBarButton *button = self.statusBarItem.button;
-    button.image = [NSImage imageNamed:@"status-icon"];
+    button.image = [NSImage imageNamed:@"status-icon-searching"];
 }
 
--(IBAction)onCalibrateClicked:(id)sender {
+-(IBAction)onConfigureClicked:(id)sender {
+    NSStoryboard *storyboard = [NSStoryboard storyboardWithName:@"Main" bundle:nil];
+    NSWindowController *windowController = [storyboard instantiateControllerWithIdentifier:@"ConfigureWindow"];
+    [windowController showWindow:nil];
 }
 
 -(IBAction)onQuitClicked:(id)sender {
