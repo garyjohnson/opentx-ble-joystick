@@ -18,4 +18,9 @@ platform :mac do
     gym
     `cd ../build && create-dmg "./OpenTX BLE Joystick.app"`
   end
+
+  desc "Version"
+  lane :version do
+    `agvtool bump -all`
+  end
 end
